@@ -3,13 +3,36 @@ h1 {
   color: white;
 }
 
+.details-wrapper {
+  width: 50%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+}
+
 h2 {
   color: white;
   font-weight: 400;
 }
 
-p {
+.highest-price {
   color: green;
+}
+
+.lowest-price {
+  color: red;
+}
+
+span {
+  color: white;
+}
+
+.current-price {
+  color: white;
 }
 
 .crypto-wrapper {
@@ -24,8 +47,26 @@ p {
   width: 50%;
   margin-top: 5px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  background-color: black;
+  padding: 12px;
+  background-color: rgb(40, 37, 60);
   border-radius: 20px;
+}
+
+.img-name-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.crypto-logo {
+  margin-right: 10px;
+  width: 32px;
+  height: 32px;
+}
+
+.price-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
