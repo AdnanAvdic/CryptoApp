@@ -4,35 +4,57 @@ h1 {
 }
 
 .details-wrapper {
-  width: 50%;
+  width: 60%;
   padding: 15px;
   display: flex;
+  color: white;
   align-items: center;
   justify-content: space-between;
-  color: white;
-  background-color: black;
+  background-color: rgb(36, 36, 36);
   border-radius: 20px;
+  font-size: 12px;
+}
+
+.details-wrapper > p {
+  width: 7.5%;
 }
 
 h2 {
   color: white;
   font-weight: 400;
+  font-size: 14px;
 }
 
 .highest-price {
   color: green;
+  font-size: 12px;
 }
 
 .lowest-price {
   color: red;
+  font-size: 12px;
 }
 
 span {
   color: white;
+  font-size: 12px;
 }
 
 .current-price {
   color: white;
+  font-size: 12px;
+}
+
+.market-cap {
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.supply-cap {
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
 .crypto-wrapper {
@@ -44,19 +66,28 @@ span {
 }
 
 .main-wrapper {
-  width: 50%;
+  width: 60%;
   margin-top: 5px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 12px;
   background-color: rgb(40, 37, 60);
   border-radius: 20px;
 }
 
-.img-name-wrapper {
+.name-wrapper {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  width: 24%;
+}
+
+.symbol {
+  margin-left: 10px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
 }
 
 .crypto-logo {
@@ -69,4 +100,18 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+  width: 20%;
+}
+
+.small-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 20%;
+}
+
+p {
+  color: white;
+  font-size: 12px;
 }
