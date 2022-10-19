@@ -1,0 +1,50 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-button {
+  width: 10%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.container > img {
+  width: 50%;
+  height: 50%;
+}
+
+.crypto-name {
+  color: white;
+}
+
+.crypto-symbol {
+  color: white;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-container > div {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 30%;
+  background-color: rgb(122, 137, 172);
+  color: white;
+}

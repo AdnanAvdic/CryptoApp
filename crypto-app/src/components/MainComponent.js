@@ -1,6 +1,8 @@
 import "../styles/MainComponent.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import DetailsComponent from "./DetailsComponent";
 
 const baseURL =
   "https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=30&page=1&sparkline=false";
@@ -23,15 +25,12 @@ function MainComponent() {
           <img src={element.image} alt="crypto-img" className="crypto-logo" />
           <h2>{element.name}</h2> <h2 className="symbol">{element.symbol}</h2>
         </div>
-
         <div className="small-wrapper">
           <p className="current-price">${element.current_price}</p>
         </div>
-
         <div className="small-wrapper">
           <p className="market-cap">${element.market_cap}</p>
         </div>
-
         <div className="small-wrapperr">
           {element.total_supply === null ? (
             <p>No cap</p>
@@ -42,7 +41,6 @@ function MainComponent() {
             </p>
           )}
         </div>
-
         <div className="price-wrapper">
           <p className="highest-price">
             ${element.high_24h} <span>24h%</span>
@@ -51,24 +49,38 @@ function MainComponent() {
             ${element.low_24h} <span>24h%</span>
           </p>
         </div>
+        <div>
+          <Link to={`/details/${element.id}`}>See More</Link>
+        </div>
       </div>
     );
   });
 
   return (
-    <div>
-      <h1>Crypto Price Tracker</h1>
-      <div className="crypto-wrapper">
-        <div className="details-wrapper">
-          <p>Name</p>
-          <p>Price</p>
-          <p>Market cap</p>
-          <p>Total supply</p>
-          <p>High / Low</p>
-        </div>
-        {cryptoCoins}
-      </div>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <div>
+            <h1>Crypto Price Tracker</h1>
+            <div className="crypto-wrapper">
+              <div className="details-wrapper">
+                <p>Name</p>
+                <p>Price</p>
+                <p>Market cap</p>
+                <p>Total supply</p>
+                <p>High / Low</p>
+                <p></p>
+              </div>
+              {cryptoCoins}
+            </div>
+          </div>
+        </Route>
+
+        <Route path="/details/:cryptoId">
+          <DetailsComponent crypto={crypto} />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
