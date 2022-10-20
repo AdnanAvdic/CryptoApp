@@ -50,7 +50,9 @@ function MainComponent() {
           </p>
         </div>
         <div>
-          <Link to={`/details/${element.id}`}>See More</Link>
+          <Link to={`/details/${element.id}`}>
+            <button>See more</button>
+          </Link>
         </div>
       </div>
     );
@@ -61,7 +63,6 @@ function MainComponent() {
       <Switch>
         <Route exact path="/">
           <div>
-            <h1>Crypto Price Tracker</h1>
             <div className="crypto-wrapper">
               <div className="details-wrapper">
                 <p>Name</p>
