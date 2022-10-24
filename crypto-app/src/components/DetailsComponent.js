@@ -106,12 +106,12 @@ function DetailsComponent(props) {
           </div>
 
           <div>
-            <p>Price change in 24h: ${price_change_24h}</p>
+            <p>Price change in 24h: ${price_change_24h.toFixed(5)}</p>
           </div>
 
           <div>
             {roi != null ? (
-              <p>Return on investment: ${returnOnInvestment(roi)}</p>
+              <p>Return on investment: ${returnOnInvestment(roi).toFixed(5)}</p>
             ) : (
               <p>Return on investment: No info</p>
             )}
