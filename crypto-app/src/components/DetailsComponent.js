@@ -7,6 +7,10 @@ function DetailsComponent(props) {
   const { cryptoId } = useParams();
   const backBtn = useHistory();
 
+  function returnOnInvestment({ percentage }) {
+    return percentage;
+  }
+
   const singleCrypto = props.crypto.find((e) => e.id === cryptoId);
   const {
     name,
@@ -26,6 +30,7 @@ function DetailsComponent(props) {
     ath_change_percentage,
     atl,
     atl_change_percentage,
+    roi,
   } = singleCrypto;
 
   return (
@@ -102,6 +107,14 @@ function DetailsComponent(props) {
 
           <div>
             <p>Price change in 24h: ${price_change_24h}</p>
+          </div>
+
+          <div>
+            {roi != null ? (
+              <p>Return on investment: ${returnOnInvestment(roi)}</p>
+            ) : (
+              <p>Return on investment: No info</p>
+            )}
           </div>
         </div>
       </div>
