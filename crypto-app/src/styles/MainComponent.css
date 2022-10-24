@@ -93,6 +93,10 @@ span {
   flex-direction: column;
 }
 
+.price-wrapper > p > span {
+  font-size: 12px;
+}
+
 .small-wrapper {
   display: flex;
   align-items: center;

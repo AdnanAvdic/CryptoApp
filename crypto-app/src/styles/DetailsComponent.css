@@ -11,6 +11,7 @@
   padding: 15px;
   margin-top: 20px;
   margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .hero-container {
@@ -20,8 +21,10 @@
 }
 
 .sub-hero-title-container {
+  color: white;
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 
 .sub-hero-title-container > img {
@@ -29,19 +32,21 @@
   height: 20%;
 }
 
-.sub-hero-title-container > p {
+.sub-hero-title-container > p,
+span {
   color: white;
   font-size: 2rem;
 }
 
 .container {
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
-  border: 1px solid black;
+  padding: 30px;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .crypto-name {
@@ -52,17 +57,42 @@
   color: white;
 }
 
-.price-container {
+.sub-hero-price-container {
+  color: white;
+  font-size: 2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
 }
 
-.price-container > div {
-  margin: 5px;
-  padding: 10px;
+.sub-hero-price-container > img {
+  width: 32px;
+  height: 32px;
+}
+
+.subtitle {
+  margin-top: 10px;
+}
+
+.details {
   border-radius: 10px;
-  width: 50%;
-  background-color: rgb(122, 137, 172);
-  color: white;
+  margin-top: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 49% 49%;
+  row-gap: 10px;
+  gap: 10px;
+  background-color: rgb(40 37 60);
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+
+.details > div {
+  display: flex;
+  border-bottom: 1px solid grey;
+  padding: 10px;
+}
+
+.details > div > p {
+  font-size: 0.825rem;
 }
