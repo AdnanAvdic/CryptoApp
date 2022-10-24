@@ -26,8 +26,6 @@ function DetailsComponent(props) {
     ath_change_percentage,
     atl,
     atl_change_percentage,
-    roi,
-    roi: { percentage },
   } = singleCrypto;
 
   return (
@@ -104,12 +102,6 @@ function DetailsComponent(props) {
 
           <div>
             <p>Price change in 24h: ${price_change_24h}</p>
-          </div>
-
-          <div>
-            <p>
-              {roi === null ? "No info" : `Return on investment: ${percentage}`}
-            </p>
           </div>
         </div>
       </div>
